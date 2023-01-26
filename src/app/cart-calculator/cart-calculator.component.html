@@ -1,0 +1,14 @@
+<div class="p-grid p-flex-column">
+    <div class="p-col">
+     <!-- <p-panel> -->
+       <div class="display">
+       <div>Sub Total: <b>{{totalValue |currency:'CAD':'symbol-narrow'}}</b></div>
+       <button pButton type="submit" label="checkout" (click)="showDialog()"></button>
+      </div>
+     <!-- </p-panel> -->
+    </div>
+    
+   
+  </div>
+<p-dialog [(visible)]="display"  [style]="{width: '50vw'}">
+    Your order will be delivered as soon as possible        </p-dialog>

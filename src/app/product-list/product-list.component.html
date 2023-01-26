@@ -1,0 +1,28 @@
+<div class="p-grid" *ngIf="allProducts?.length>0">
+    <div class="p-col-4" *ngFor="let product of allProducts">
+    <p-card>
+        <a [routerLink]="['/product', product.id]">
+            <div class="view overlay hm-white-slight">
+              <img
+                [src]="product.image"
+                class="img-fluid"
+                alt=""
+                width="360px"
+                height="450px"
+              />
+              </div>
+              </a>
+              <ng-template pTemplate="footer">
+                  <div>
+                     <h5>{{product.title}}</h5> 
+                     <h5>{{product.description}}</h5> 
+                     <h5>{{product.price |currency:'CAD':'symbol-narrow'}}</h5> 
+                  </div>
+            </ng-template>
+    </p-card>
+    </div>
+    
+    <!-- <div class="p-col">
+      <div class="box">3</div>
+    </div> -->
+  </div>

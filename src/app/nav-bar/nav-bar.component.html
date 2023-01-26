@@ -1,0 +1,14 @@
+<p-menubar *ngIf="menubaritems"[model]="menubaritems">
+  <ng-template pTemplate="start">
+      <img src="assets/showcase/dufry.png" height="50" class="mr-3">
+  </ng-template>
+    <ng-template pTemplate="end">
+        <span routerLink="/" style="padding:112px;cursor: 'pointer'">Products</span>
+        <span class="p-input-icon-left">
+            <i class="pi pi-searchr"></i>
+          <p-autoComplete [(ngModel)]="selectedProduct" placeholder="Search" [suggestions]="filteredCountries" (completeMethod)="search($event)" (onSelect)="onProductselect()"></p-autoComplete>  
+      </span>
+    </ng-template>
+  
+</p-menubar>
+
